@@ -1,6 +1,6 @@
 # XML
 
-Docker container with utilities to process XML data (xmllint...).
+Docker container with utilities to process XML data (xmllint, xsltproc...).
 
 ## Example
 
