@@ -31,5 +31,5 @@ $ docker run --rm -it --net=none -v "${PWD}:/tmp" thomasleplus/xml xmllint --sch
 To know more command line options of `xmllint`:
 
 ```
-$ docker run --rm -it --net=none thomasleplus/xml xmllint -h
+$ docker run --rm -it --net=none thomasleplus/xml xmllint --help
 ```
