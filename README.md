@@ -2,7 +2,23 @@
 
 Docker container with utilities to process XML data (xmllint, xsltproc...).
 
-## Example
+## Example not using the filesystem
+
+Let's say that you have a file `foo.xml` that you want to reformat and save the result to `bar.xml`:
+
+### Mac/Linux
+
+```
+cat foo.xml | docker run --rm -i --net=none thomasleplus/xml xmllint - > bar.xml
+```
+
+### Windows
+
+```
+type foo.xml | docker run --rm -i --net=none thomasleplus/xml xmllint - > bar.xml
+```
+
+## Example requiring the filesystem
 
 Assuming that you have a file `foo.xml` in your current working directory that you want to validate using `foo.xsd`:
 
