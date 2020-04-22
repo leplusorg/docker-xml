@@ -6,6 +6,6 @@ RUN apk --update --no-cache add libxml2-utils libxslt maven py3-setuptools \
 RUN pip3 install --no-cache-dir \
     yq
 
-COPY pom.xml pom.xml
+COPY pom.xml /opt/pom.xml
 
-RUN mvn dependency:copy-dependencies -DoutputDirectory=/opt
+RUN mvn -f /opt/pom.xml dependency:copy-dependencies -DoutputDirectory=/opt
