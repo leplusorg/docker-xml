@@ -8,4 +8,4 @@ RUN pip3 install --no-cache-dir \
 
 COPY pom.xml pom.xml
 
-RUN mvn dependency:copy-dependencies -DoutputDirectory=.
+RUN mvn dependency:copy-dependencies -DoutputDirectory=/opt
