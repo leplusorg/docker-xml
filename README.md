@@ -42,6 +42,12 @@ In PowerShell:
 docker run --rm -t --net=none -v "${PWD}:/tmp" thomasleplus/xml xmllint --schema /tmp/foo.xsd /tmp/foo.xml --noout
 ```
 
+## XSLT with Saxon HE
+
+```
+docker run --rm -t --user="$(id -u):$(id -g)" --net=none -v "$(pwd):/tmp" thomasleplus/xml java -jar /opt/Saxon-HE-9.9.1-7.jar -s:/tmp/source.xml -xsl:/tmp/stylesheet.xsl -o:/tmp/output.xml
+```
+
 ## Help
 
 To know more command line options of `xmllint`:
