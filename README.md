@@ -7,6 +7,7 @@ Docker container with utilities to process XML data (xmllint, xsltproc...).
 ![Docker Pulls](https://img.shields.io/docker/pulls/thomasleplus/xml)
 ![Docker Automated](https://img.shields.io/docker/cloud/automated/thomasleplus/xml)
 ![Docker Build](https://img.shields.io/docker/cloud/build/thomasleplus/xml)
+![Docker Version](https://img.shields.io/docker/v/thomasleplus/xml?sort=semver)
 
 ## Example not using the filesystem
 
