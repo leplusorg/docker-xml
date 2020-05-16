@@ -2,7 +2,7 @@
 
 Docker container with utilities to process XML data (xmllint, xsltproc...).
 
-![GitHub Build](https://img.shields.io/github/workflow/status/thomasleplus/xml/Docker%20Image%20CI)
+![GitHub Build](https://img.shields.io/github/workflow/status/thomasleplus/docker-xml/Docker%20Image%20CI)
 ![Docker Stars](https://img.shields.io/docker/stars/thomasleplus/xml)
 ![Docker Pulls](https://img.shields.io/docker/pulls/thomasleplus/xml)
 ![Docker Automated](https://img.shields.io/docker/cloud/automated/thomasleplus/xml)
