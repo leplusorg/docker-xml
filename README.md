@@ -2,6 +2,11 @@
 
 Docker container with utilities to process XML data (xmllint, xsltproc...).
 
+![Docker Stars](https://img.shields.io/docker/stars/thomasleplus/xml.svg)
+![Docker Pulls](https://img.shields.io/docker/pulls/thomasleplus/xml.svg)
+![Docker Automated](https://img.shields.io/docker/automated/thomasleplus/xml.svg)
+![Docker Build](https://img.shields.io/docker/build/thomasleplus/xml.svg)
+
 ## Example not using the filesystem
 
 Let's say that you have a file `foo.xml` that you want to reformat and save the result to `bar.xml`:
