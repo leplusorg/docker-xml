@@ -2,12 +2,12 @@
 
 Docker container with utilities to process XML data (xmllint, xsltproc...).
 
-![Docker Build](https://github.com/thomasleplus/docker-yaml/workflows/Docker/badge.svg)
-![Docker Stars](https://img.shields.io/docker/stars/thomasleplus/yaml)
-![Docker Pulls](https://img.shields.io/docker/pulls/thomasleplus/yaml)
-![Docker Automated](https://img.shields.io/docker/cloud/automated/thomasleplus/yaml)
-![Docker Build](https://img.shields.io/docker/cloud/build/thomasleplus/yaml)
-![Docker Version](https://img.shields.io/docker/v/thomasleplus/yaml?sort=semver)
+[![Docker Build](https://github.com/thomasleplus/docker-xml/workflows/Docker/badge.svg)](https://github.com/thomasleplus/docker-xml/actions?query=workflow:"Docker")
+[![Docker Stars](https://img.shields.io/docker/stars/thomasleplus/xml)](https://hub.docker.com/r/thomasleplus/xml)
+[![Docker Pulls](https://img.shields.io/docker/pulls/thomasleplus/xml)](https://hub.docker.com/r/thomasleplus/xml)
+[![Docker Automated](https://img.shields.io/docker/cloud/automated/thomasleplus/xml)](https://hub.docker.com/r/thomasleplus/xml)
+[![Docker Build](https://img.shields.io/docker/cloud/build/thomasleplus/xml)](https://hub.docker.com/r/thomasleplus/xml)
+[![Docker Version](https://img.shields.io/docker/v/thomasleplus/xml?sort=semver)](https://hub.docker.com/r/thomasleplus/xml)
 
 ## Example not using the filesystem
 
