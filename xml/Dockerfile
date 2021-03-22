@@ -1,4 +1,4 @@
-FROM openjdk:15-alpine
+FROM openjdk:16-alpine
 
 RUN apk --update --no-cache add libxml2-utils libxslt maven py3-setuptools py3-pip \
     && rm -rf /var/cache/apk/*
