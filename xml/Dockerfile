@@ -1,4 +1,4 @@
-FROM openjdk:17-slim
+FROM openjdk:17-jdk-slim
 
 RUN mkdir -p /usr/share/man/man1/ && apt-get update && apt-get install -y \
     libxml2-utils \
