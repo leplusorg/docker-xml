@@ -2,12 +2,12 @@
 
 Docker container with utilities to process XML data (xmllint, xsltproc...).
 
-[![Docker Build](https://github.com/thomasleplus/docker-xml/workflows/Docker/badge.svg)](https://github.com/thomasleplus/docker-xml/actions?query=workflow:"Docker")
-[![Docker Stars](https://img.shields.io/docker/stars/thomasleplus/xml)](https://hub.docker.com/r/thomasleplus/xml)
-[![Docker Pulls](https://img.shields.io/docker/pulls/thomasleplus/xml)](https://hub.docker.com/r/thomasleplus/xml)
-[![Docker Automated](https://img.shields.io/docker/cloud/automated/thomasleplus/xml)](https://hub.docker.com/r/thomasleplus/xml)
-[![Docker Build](https://img.shields.io/docker/cloud/build/thomasleplus/xml)](https://hub.docker.com/r/thomasleplus/xml)
-[![Docker Version](https://img.shields.io/docker/v/thomasleplus/xml?sort=semver)](https://hub.docker.com/r/thomasleplus/xml)
+[![Docker Build](https://github.com/leplusorg/docker-xml/workflows/Docker/badge.svg)](https://github.com/leplusorg/docker-xml/actions?query=workflow:"Docker")
+[![Docker Stars](https://img.shields.io/docker/stars/leplusorg/xml)](https://hub.docker.com/r/leplusorg/xml)
+[![Docker Pulls](https://img.shields.io/docker/pulls/leplusorg/xml)](https://hub.docker.com/r/leplusorg/xml)
+[![Docker Automated](https://img.shields.io/docker/cloud/automated/leplusorg/xml)](https://hub.docker.com/r/leplusorg/xml)
+[![Docker Build](https://img.shields.io/docker/cloud/build/leplusorg/xml)](https://hub.docker.com/r/leplusorg/xml)
+[![Docker Version](https://img.shields.io/docker/v/leplusorg/xml?sort=semver)](https://hub.docker.com/r/leplusorg/xml)
 
 ## Example not using the filesystem
 
@@ -16,13 +16,13 @@ Let's say that you have a file `foo.xml` that you want to reformat and save the 
 ### Mac/Linux
 
 ```
-cat foo.xml | docker run --rm -i --net=none thomasleplus/xml xmllint - > bar.xml
+cat foo.xml | docker run --rm -i --net=none leplusorg/xml xmllint - > bar.xml
 ```
 
 ### Windows
 
 ```
-type foo.xml | docker run --rm -i --net=none thomasleplus/xml xmllint - > bar.xml
+type foo.xml | docker run --rm -i --net=none leplusorg/xml xmllint - > bar.xml
 ```
 
 ## Example requiring the filesystem
@@ -32,7 +32,7 @@ Assuming that you have a file `foo.xml` in your current working directory that y
 ### Mac/Linux
 
 ```
-docker run --rm -t --user="$(id -u):$(id -g)" --net=none -v "$(pwd):/tmp" thomasleplus/xml xmllint --schema /tmp/foo.xsd /tmp/foo.xml --noout
+docker run --rm -t --user="$(id -u):$(id -g)" --net=none -v "$(pwd):/tmp" leplusorg/xml xmllint --schema /tmp/foo.xsd /tmp/foo.xml --noout
 ```
 
 ### Windows
@@ -40,19 +40,19 @@ docker run --rm -t --user="$(id -u):$(id -g)" --net=none -v "$(pwd):/tmp" thomas
 In `cmd`:
 
 ```
-docker run --rm -t --net=none -v "%cd%:/tmp" thomasleplus/xml xmllint --schema /tmp/foo.xsd /tmp/foo.xml --noout
+docker run --rm -t --net=none -v "%cd%:/tmp" leplusorg/xml xmllint --schema /tmp/foo.xsd /tmp/foo.xml --noout
 ```
 
 In PowerShell:
 
 ```
-docker run --rm -t --net=none -v "${PWD}:/tmp" thomasleplus/xml xmllint --schema /tmp/foo.xsd /tmp/foo.xml --noout
+docker run --rm -t --net=none -v "${PWD}:/tmp" leplusorg/xml xmllint --schema /tmp/foo.xsd /tmp/foo.xml --noout
 ```
 
 ## XSLT with Saxon HE
 
 ```
-docker run --rm -t --user="$(id -u):$(id -g)" --net=none -v "$(pwd):/tmp" thomasleplus/xml java -jar /opt/Saxon-HE-9.9.1-7.jar -s:/tmp/source.xml -xsl:/tmp/stylesheet.xsl -o:/tmp/output.xml
+docker run --rm -t --user="$(id -u):$(id -g)" --net=none -v "$(pwd):/tmp" leplusorg/xml java -jar /opt/Saxon-HE-9.9.1-7.jar -s:/tmp/source.xml -xsl:/tmp/stylesheet.xsl -o:/tmp/output.xml
 ```
 
 ## Help
@@ -60,9 +60,9 @@ docker run --rm -t --user="$(id -u):$(id -g)" --net=none -v "$(pwd):/tmp" thomas
 To know more command line options of `xmllint`:
 
 ```
-docker run --rm --net=none thomasleplus/xml xmllint --help
+docker run --rm --net=none leplusorg/xml xmllint --help
 ```
 
 ## Request new tool
 
-Please use [this link](https://github.com/thomasleplus/docker-xml/issues/new?assignees=thomasleplus&labels=enhancement&template=feature_request.md&title=%5BFEAT%5D) (GitHub account required) to request that a new tool be added to the image. I am always interested in adding new capabilities to these images.
+Please use [this link](https://github.com/leplusorg/docker-xml/issues/new?assignees=leplusorg&labels=enhancement&template=feature_request.md&title=%5BFEAT%5D) (GitHub account required) to request that a new tool be added to the image. I am always interested in adding new capabilities to these images.
