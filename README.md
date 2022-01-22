@@ -57,7 +57,7 @@ docker run --rm -t --user="$(id -u):$(id -g)" --net=none -v "$(pwd):/tmp" leplus
 
 ## Help
 
-To know more command line options of `xmllint`:
+To know more command-line options of `xmllint`:
 
 ```bash
 docker run --rm --net=none leplusorg/xml xmllint --help
