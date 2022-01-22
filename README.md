@@ -13,15 +13,15 @@ Docker container with utilities to process XML data (xmllint, xsltproc...).
 
 Let's say that you have a file `foo.xml` that you want to reformat and save the result to `bar.xml`:
 
-### Mac/Linux
+**Mac/Linux**
 
-```
+```bash
 cat foo.xml | docker run --rm -i --net=none leplusorg/xml xmllint - > bar.xml
 ```
 
-### Windows
+**Windows**
 
-```
+```batch
 type foo.xml | docker run --rm -i --net=none leplusorg/xml xmllint - > bar.xml
 ```
 
@@ -29,29 +29,29 @@ type foo.xml | docker run --rm -i --net=none leplusorg/xml xmllint - > bar.xml
 
 Assuming that you have a file `foo.xml` in your current working directory that you want to validate using `foo.xsd`:
 
-### Mac/Linux
+**Mac/Linux**
 
-```
+```bash
 docker run --rm -t --user="$(id -u):$(id -g)" --net=none -v "$(pwd):/tmp" leplusorg/xml xmllint --schema /tmp/foo.xsd /tmp/foo.xml --noout
 ```
 
-### Windows
+**Windows**
 
 In `cmd`:
 
-```
+```batch
 docker run --rm -t --net=none -v "%cd%:/tmp" leplusorg/xml xmllint --schema /tmp/foo.xsd /tmp/foo.xml --noout
 ```
 
 In PowerShell:
 
-```
+```pwsh
 docker run --rm -t --net=none -v "${PWD}:/tmp" leplusorg/xml xmllint --schema /tmp/foo.xsd /tmp/foo.xml --noout
 ```
 
 ## XSLT with Saxon HE
 
-```
+```bash
 docker run --rm -t --user="$(id -u):$(id -g)" --net=none -v "$(pwd):/tmp" leplusorg/xml java -jar /opt/Saxon-HE-9.9.1-7.jar -s:/tmp/source.xml -xsl:/tmp/stylesheet.xsl -o:/tmp/output.xml
 ```
 
@@ -59,7 +59,7 @@ docker run --rm -t --user="$(id -u):$(id -g)" --net=none -v "$(pwd):/tmp" leplus
 
 To know more command line options of `xmllint`:
 
-```
+```bash
 docker run --rm --net=none leplusorg/xml xmllint --help
 ```
 
