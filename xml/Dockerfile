@@ -15,4 +15,4 @@ RUN pip3 install --no-cache-dir \
 
 COPY pom.xml mvnw .mvn /opt/
 
-RUN ./mvnw -f /opt/pom.xml dependency:copy-dependencies -DoutputDirectory=/opt
+RUN /opt/mvnw -f /opt/pom.xml dependency:copy-dependencies -DoutputDirectory=/opt
