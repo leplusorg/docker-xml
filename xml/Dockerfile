@@ -13,6 +13,12 @@ RUN mkdir -p /usr/share/man/man1/ && apt-get update && apt-get install --no-inst
 RUN pip3 install --no-cache-dir \
     yq
 
-COPY pom.xml mvnw .mvn /opt/
+COPY pom.xml mvnw /opt/
 
-RUN /opt/mvnw -f /opt/pom.xml dependency:copy-dependencies -DoutputDirectory=/opt
+COPY .mvn/ /opt/.mvn/
+
+WORKDIR /opt
+
+RUN ./mvnw dependency:copy-dependencies
+
+WORKDIR /
