@@ -1,4 +1,4 @@
-FROM openjdk:20-slim
+FROM openjdk:21-slim
 
 # hadolint ignore=DL3008
 RUN mkdir -p /usr/share/man/man1/ && apt-get update && apt-get install --no-install-recommends -y \
