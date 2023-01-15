@@ -1,4 +1,4 @@
-FROM openjdk:21-slim
+FROM eclipse-temurin:17-jdk-alpine
 
 # hadolint ignore=DL3008
 RUN mkdir -p /usr/share/man/man1/ && apt-get update && apt-get install --no-install-recommends -y \
