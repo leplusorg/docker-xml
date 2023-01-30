@@ -5,6 +5,13 @@
   <groupId>org.leplus</groupId>
   <artifactId>xml-libs</artifactId>
   <version>1.0.0</version>
+  <properties>
+    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
+    <dependencyCheck.version>8.0.1</dependencyCheck.version>
+    <dependencyCheck.skip>false</dependencyCheck.skip>
+    <dependencyCheck.threshold>7</dependencyCheck.threshold>
+  </properties>
   <build>
     <plugins>
       <plugin>
@@ -30,6 +37,23 @@
                 </requireOS>
               </rules>
             </configuration>
+          </execution>
+        </executions>
+      </plugin>
+      <plugin>
+	<groupId>org.owasp</groupId>
+        <artifactId>dependency-check-maven</artifactId>
+        <version>${dependencyCheck.version}</version>
+        <configuration>
+          <failBuildOnCVSS>${dependencyCheck.threshold}</failBuildOnCVSS>
+	  <failOnError>true</failOnError>
+	  <skip>${dependencyCheck.skip}</skip>
+        </configuration>
+        <executions>
+          <execution>
+            <goals>
+              <goal>check</goal>
+            </goals>
           </execution>
         </executions>
       </plugin>
