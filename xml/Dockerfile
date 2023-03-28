@@ -1,4 +1,4 @@
-FROM eclipse-temurin:19-jdk
+FROM eclipse-temurin:20-jdk
 
 # hadolint ignore=DL3008
 RUN mkdir -p /usr/share/man/man1/ && apt-get update && apt-get install --no-install-recommends -y \
