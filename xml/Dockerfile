@@ -10,7 +10,7 @@ RUN mkdir -p /usr/share/man/man1/ && apt-get update && apt-get install --no-inst
     && rm -rf /var/lib/apt/lists/*
 
 # hadolint ignore=DL3013
-RUN pip3 install --no-cache-dir \
+RUN pip3 install --no-cache-dir --upgrade \
     yq
 
 COPY pom.xml mvnw /opt/
