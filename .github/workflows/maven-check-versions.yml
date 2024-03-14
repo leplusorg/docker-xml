@@ -14,7 +14,9 @@ jobs:
     container:
       image: leplusorg/maven-check-versions:latest
     steps:
+      - name: Set IMAGE
+        run: echo "IMAGE=${GITHUB_REPOSITORY#*/docker-}" >> "${GITHUB_ENV}"
       - uses: actions/checkout@v4
       - name: Check the versions
-        working-directory: xml
+        working-directory: ${{ env.IMAGE }}
         run: /opt/maven-check-versions.sh
