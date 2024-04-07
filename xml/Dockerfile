@@ -2,7 +2,12 @@ FROM eclipse-temurin:21-jdk
 
 # hadolint ignore=DL3008
 RUN mkdir -p /usr/share/man/man1/ && apt-get update && apt-get install --no-install-recommends -y \
+    html-xml-utils \
     libxml2-utils \
+    xml2rfc \
+    xmlindent \
+    xmlstarlet \
+    xmlto \
     xsltproc \
     maven \
     python3-pip \

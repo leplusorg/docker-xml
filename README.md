@@ -5,8 +5,6 @@ Docker container with utilities to process XML data (xmllint, xsltproc...).
 [![Docker Build](https://github.com/leplusorg/docker-xml/workflows/Docker/badge.svg)](https://github.com/leplusorg/docker-xml/actions?query=workflow:"Docker")
 [![Docker Stars](https://img.shields.io/docker/stars/leplusorg/xml)](https://hub.docker.com/r/leplusorg/xml)
 [![Docker Pulls](https://img.shields.io/docker/pulls/leplusorg/xml)](https://hub.docker.com/r/leplusorg/xml)
-[![Docker Automated](https://img.shields.io/docker/cloud/automated/leplusorg/xml)](https://hub.docker.com/r/leplusorg/xml)
-[![Docker Build](https://img.shields.io/docker/cloud/build/leplusorg/xml)](https://hub.docker.com/r/leplusorg/xml)
 [![Docker Version](https://img.shields.io/docker/v/leplusorg/xml?sort=semver)](https://hub.docker.com/r/leplusorg/xml)
 
 ## Example not using the filesystem
