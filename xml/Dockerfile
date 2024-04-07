@@ -2,6 +2,7 @@ FROM eclipse-temurin:21-jdk
 
 # hadolint ignore=DL3008
 RUN mkdir -p /usr/share/man/man1/ && apt-get update && apt-get install --no-install-recommends -y \
+    gpxinfo \
     html-xml-utils \
     libxml2-utils \
     xml2rfc \
