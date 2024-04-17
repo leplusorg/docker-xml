@@ -6,4 +6,4 @@ services:
     build:
       context: .
       dockerfile: Dockerfile
-    command: xmllint --version
+    command: "[ $(id -u) -ne 0 ] && xmllint --version"
