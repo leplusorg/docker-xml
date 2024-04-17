@@ -1,5 +1,7 @@
 FROM eclipse-temurin:21-jdk
 
+HEALTHCHECK NONE
+
 # hadolint ignore=DL3008
 RUN mkdir -p /usr/share/man/man1/ && apt-get update && apt-get install --no-install-recommends -y \
     gpxinfo \
@@ -27,4 +29,12 @@ WORKDIR /opt
 
 RUN ./mvnw dependency:copy-dependencies
 
-WORKDIR /
+ARG USER=default
+
+ENV HOME "/home/${USER}"
+
+RUN adduser -D "${USER}"
+
+USER "${USER}"
+
+WORKDIR "${HOME}"
