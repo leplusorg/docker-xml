@@ -11,6 +11,7 @@
     <dependencyCheck.version>9.1.0</dependencyCheck.version>
     <dependencyCheck.skip>false</dependencyCheck.skip>
     <dependencyCheck.threshold>7</dependencyCheck.threshold>
+    <saxon.version>12.4</saxon.version>
   </properties>
   <build>
     <plugins>
@@ -63,7 +64,7 @@
     <dependency>
       <groupId>net.sf.saxon</groupId>
       <artifactId>Saxon-HE</artifactId>
-      <version>12.4</version>
+      <version>${saxon.version}</version>
     </dependency>
   </dependencies>
 </project>

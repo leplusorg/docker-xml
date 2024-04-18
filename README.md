@@ -50,8 +50,10 @@ docker run --rm -t --net=none -v "${PWD}:/tmp" leplusorg/xml xmllint --schema /t
 ## XSLT with Saxon HE
 
 ```bash
-docker run --rm -t --user="$(id -u):$(id -g)" --net=none -v "$(pwd):/tmp" leplusorg/xml java -jar /opt/Saxon-HE-9.9.1-7.jar -s:/tmp/source.xml -xsl:/tmp/stylesheet.xsl -o:/tmp/output.xml
+docker run --rm -t --user="$(id -u):$(id -g)" --net=none -v "$(pwd):/tmp" leplusorg/xml java -jar /opt/saxon/run.sh -s:/tmp/source.xml -xsl:/tmp/stylesheet.xsl -o:/tmp/output.xml
 ```
+
+See [Saxon's documentation](https://www.saxonica.com/documentation12/index.html#!using-xsl/commandline) for more details regarding syntax and options.
 
 ## Help
 
