@@ -2,6 +2,11 @@ FROM eclipse-temurin:21-jdk
 
 HEALTHCHECK NONE
 
+ARG USER_NAME=default
+ARG USER_HOME=/home/default
+ARG USER_ID=1000
+ARG USER_GECOS=Default
+
 # hadolint ignore=DL3008,DL3013
 RUN mkdir -p /usr/share/man/man1/ && apt-get update && apt-get install --no-install-recommends -y \
     gpxinfo \
@@ -27,11 +32,6 @@ COPY .mvn/ /opt/saxon/.mvn/
 WORKDIR /opt/saxon
 
 RUN ./mvnw dependency:copy-dependencies && chmod -R o+rX /opt/saxon
-
-ARG USER_NAME=default
-ARG USER_HOME=/home/default
-ARG USER_ID=1000
-ARG USER_GECOS=Default
 
 RUN adduser \
   --home "${USER_HOME}" \
