@@ -1,4 +1,4 @@
-FROM eclipse-temurin:21.0.2_13-jdk@sha256:06987fff4ef14b33681266285495b8c6a4ae2260860837196a9ab053de803359
+FROM eclipse-temurin:21.0.2_13-jdk-alpine@sha256:8d6a992f7d6fe014f070a81a7f1f74afcd9bb7ace568773e44025819ba745174
 
 HEALTHCHECK NONE
 
@@ -7,24 +7,25 @@ ARG USER_HOME=/home/default
 ARG USER_ID=1000
 ARG USER_GECOS=Default
 
-# hadolint ignore=DL3008
-RUN mkdir -p /usr/share/man/man1/ && apt-get update && apt-get install --no-install-recommends -y \
-    gpxinfo \
+# FIXME: xml2rfc currently only in edge stream
+# hadolint ignore=DL3018
+RUN apk --update --no-cache add \
     html-xml-utils \
     libxml2-utils \
-    xml2rfc \
+    libxslt \
+    maven \
+    py3-gpxpy \
+    py3-pip \
+    py3-tcx2gpx \
+    python3 \
+    python3-dev \
     xmlindent \
     xmlstarlet \
     xmlto \
-    xsltproc \
-    maven \
-    python3-pip \
-    && apt-get -y clean \
-    && rm -rf /var/lib/apt/lists/*
+    && rm -rf /var/cache/apk/*
 
-# FIXME: --break-system-packages not supported until Python 3.11
 # hadolint ignore=DL3013
-RUN pip3 install --no-cache-dir --upgrade yq
+RUN pip3 install --no-cache-dir --upgrade --break-system-packages yq
 
 RUN mkdir -p /opt/saxon
 
