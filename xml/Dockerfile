@@ -7,8 +7,8 @@ ARG USER_HOME=/home/default
 ARG USER_ID=1000
 ARG USER_GECOS=Default
 
-# hadolint ignore=DL3008,DL3013
-RUN mkdir -p /usr/share/man/man1/ && apt-get update && apt-get install --no-install-recommends -y \
+# hadolint ignore=DL3018
+RUN apk --update --no-cache add \
     gpxinfo \
     html-xml-utils \
     libxml2-utils \
@@ -18,10 +18,13 @@ RUN mkdir -p /usr/share/man/man1/ && apt-get update && apt-get install --no-inst
     xmlto \
     xsltproc \
     maven \
-    python3-pip \
-    && apt-get -y clean \
-    && rm -rf /var/lib/apt/lists/* \
-    && pip3 install --no-cache-dir --upgrade yq
+    python3 \
+    python3-dev \
+    py3-pip \
+    && rm -rf /var/cache/apk/*
+
+# hadolint ignore=DL3013
+RUN pip3 install --no-cache-dir --upgrade --break-system-packages yq
 
 RUN mkdir -p /opt/saxon
 
