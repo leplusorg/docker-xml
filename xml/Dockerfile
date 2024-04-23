@@ -1,4 +1,4 @@
-FROM eclipse-temurin:21.0.2_13-jdk-alpine@sha256:8d6a992f7d6fe014f070a81a7f1f74afcd9bb7ace568773e44025819ba745174
+FROM eclipse-temurin:21.0.2_13-jdk@sha256:06987fff4ef14b33681266285495b8c6a4ae2260860837196a9ab053de803359
 
 HEALTHCHECK NONE
 
@@ -7,8 +7,8 @@ ARG USER_HOME=/home/default
 ARG USER_ID=1000
 ARG USER_GECOS=Default
 
-# hadolint ignore=DL3018
-RUN apk --update --no-cache add \
+# hadolint ignore=DL3008
+RUN mkdir -p /usr/share/man/man1/ && apt-get update && apt-get install --no-install-recommends -y \
     gpxinfo \
     html-xml-utils \
     libxml2-utils \
@@ -18,10 +18,9 @@ RUN apk --update --no-cache add \
     xmlto \
     xsltproc \
     maven \
-    python3 \
-    python3-dev \
-    py3-pip \
-    && rm -rf /var/cache/apk/*
+    python3-pip \
+    && apt-get -y clean \
+    && rm -rf /var/lib/apt/lists/*
 
 # hadolint ignore=DL3013
 RUN pip3 install --no-cache-dir --upgrade --break-system-packages yq
