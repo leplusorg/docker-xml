@@ -23,7 +23,8 @@ RUN mkdir -p /usr/share/man/man1/ && apt-get update && apt-get install --no-inst
     && rm -rf /var/lib/apt/lists/*
 
 # hadolint ignore=DL3013
-RUN pip3 install --no-cache-dir --upgrade --break-system-packages yq
+# FIXME: --break-system-packages not supported until Python 3.11
+RUN pip3 install --no-cache-dir --upgrade yq
 
 RUN mkdir -p /opt/saxon
 
