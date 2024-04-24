@@ -1,4 +1,4 @@
-FROM eclipse-temurin:21.0.2_13-jdk-alpine@sha256:8d6a992f7d6fe014f070a81a7f1f74afcd9bb7ace568773e44025819ba745174
+FROM alpine:3.19.1@sha256:c5b1261d6d3e43071626931fc004f70149baeba2c8ec672bd4f27761f8e1ad6b
 
 HEALTHCHECK NONE
 
@@ -14,6 +14,7 @@ RUN apk --update --no-cache add \
     libxml2-utils \
     libxslt \
     maven \
+    openjdk21-jre-headless \
     py3-gpxpy \
     py3-pip \
     py3-tcx2gpx \
