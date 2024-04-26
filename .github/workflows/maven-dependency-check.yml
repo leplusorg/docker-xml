@@ -38,5 +38,12 @@ jobs:
         run: |
           # shellcheck disable=SC2086
           ./mvnw ${MAVEN_CLI_OPTS} dependency-check:aggregate
+      - name: Upload artifacts
+        uses: actions/upload-artifact@65462800fd760344b1a7b4382951275a0abb4808 # v4.3.3
+        working-directory: ./xml
+        with:
+          name: ${{ env.REPOSITORY }}
+          path: target/
       - name: Clean up
-        run: rm "${HOME}/.m2/settings.xml"
+        working-directory: ./xml
+        run: rm .m2/settings.xml"
