@@ -45,4 +45,4 @@ jobs:
           path: xml/target/
       - name: Clean up
         working-directory: xml
-        run: rm .m2/settings.xml
+        run: rm "${HOME}/.m2/settings.xml"
