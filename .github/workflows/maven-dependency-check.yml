@@ -34,15 +34,15 @@ jobs:
           distribution: temurin
           java-version: 21
       - name: Dependency Check with Maven
-        working-directory: ./xml
+        working-directory: xml
         run: |
           # shellcheck disable=SC2086
           ./mvnw ${MAVEN_CLI_OPTS} dependency-check:aggregate
       - name: Upload artifacts
         uses: actions/upload-artifact@65462800fd760344b1a7b4382951275a0abb4808 # v4.3.3
         with:
-          name: dependency-check-report
-          path: ${{github.workspace}}/xml/target/
+          name: ${{ env.REPOSITORY }}
+          path: xml/target/
       - name: Clean up
-        working-directory: ./xml
+        working-directory: xml
         run: rm .m2/settings.xml
