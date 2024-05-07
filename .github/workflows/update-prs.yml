@@ -25,9 +25,9 @@ jobs:
             }).forEach(function(pr) {
               core.info(pr)
               github.rest.pulls.updateBranch({
-                context.repo.owner,
-                context.repo.repo,
-                pr.number,
+                owner: context.repo.owner,
+                repo: context.repo.repo,
+                pull_number: pr.number,
               }).then(function(result) {
                 core.info(result)
               }).catch(function(error) {
