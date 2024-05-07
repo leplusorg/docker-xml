@@ -17,12 +17,13 @@ jobs:
         uses: actions/github-script@60a0d83039c74a4aee543508d2ffcb1c3799cdea # v7.0.1
         with:
           script: |
-            const prs = await github.rest.pulls.list({
+            const opts = github.rest.pulls.list.endpoint.merge({
               owner: context.repo.owner,
               repo: context.repo.repo,
               state: 'open',
               base: context.ref.replace('refs/heads/', ''),
             })
+            const prs = await github.paginate(opts)
             core.info(prs)
             for (const pr of prs) {
               github.rest.pulls.updateBranch({
