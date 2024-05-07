@@ -24,7 +24,7 @@ jobs:
               base: context.ref.replace('refs/heads/', ''),
             }).forEach(function(pr) {
               core.info(pr)
-	      github.rest.pulls.updateBranch({
+              github.rest.pulls.updateBranch({
                 context.repo.owner,
                 context.repo.repo,
                 pr.number,
