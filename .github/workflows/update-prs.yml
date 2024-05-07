@@ -32,7 +32,7 @@ jobs:
                 repo: context.repo.repo,
                 pull_number: pr.number,
               }).then(function(result) {
-                core.info(JSON.stringify(result))
+                core.info(JSON.stringify(result.data))
               }).catch(function(error) {
                 core.error(error)
               })
