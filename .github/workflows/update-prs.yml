@@ -25,8 +25,8 @@ jobs:
               base: context.ref.replace('refs/heads/', ''),
             })
             const prs = await github.paginate(opts)
-            core.info(JSON.stringify(prs))
             for (const pr of prs) {
+              core.info(`Updating PR #${pr.number}`)
               github.rest.pulls.updateBranch({
                 owner: context.repo.owner,
                 repo: context.repo.repo,
