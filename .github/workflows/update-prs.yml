@@ -1,0 +1,36 @@
+---
+name: Update PRs
+
+on:
+  push:
+  workflow_dispatch:
+
+permissions:
+  pull_requests: write
+
+jobs:
+  update:
+    if: startsWith(github.ref, 'refs/heads/')
+    runs-on: ubuntu-latest
+    steps:
+      - name: Update Pull Requests
+        uses: actions/github-script@60a0d83039c74a4aee543508d2ffcb1c3799cdea # v7.0.1
+        with:
+          script: |
+            github.rest.pulls.list({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              state: 'open',
+              base: context.ref.replace('refs/heads/', ''),
+            }).forEach(function(pr) {
+              core.info(pr)
+	      github.rest.pulls.updateBranch({
+                context.repo.owner,
+                context.repo.repo,
+                pr.number,
+              }).then(function(result) {
+                core.info(result)
+              }).catch(function(error) {
+                core.error(error)
+              })
+            })
