@@ -1,5 +1,5 @@
 ---
-name: Docker
+name: Trigger Release
 
 on:
   push:
@@ -49,7 +49,7 @@ jobs:
               }
             })
           result-encoding: string
-      - name: Trigger release
+      - name: Trigger Release
         if: env.VERSION != '' && steps.check-release.outputs.result == 'undefined'
         uses: actions/create-release@0cb9c9b65d5d1901c1f53e5e66eaf4afd303e70e # v1.1.4
         env:
