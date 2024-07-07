@@ -8,10 +8,10 @@
   <properties>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
-    <dependencyCheck.version>9.2.0</dependencyCheck.version>
+    <dependencyCheck.version>10.0.1</dependencyCheck.version>
     <dependencyCheck.skip>false</dependencyCheck.skip>
     <dependencyCheck.threshold>7</dependencyCheck.threshold>
-    <saxon.version>12.4</saxon.version>
+    <saxon.version>12.5</saxon.version>
   </properties>
   <build>
     <plugins>
