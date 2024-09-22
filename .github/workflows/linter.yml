@@ -18,7 +18,7 @@ on:
   push:
   pull_request:
   schedule:
-    - cron: '0 0 * * 0'
+    - cron: "0 0 * * 0"
   workflow_dispatch:
 
 permissions: {}
@@ -64,5 +64,5 @@ jobs:
           VALIDATE_ALL_CODEBASE: true
           LINTER_RULES_PATH: .
           DEFAULT_BRANCH: main
-          FILTER_REGEX_EXCLUDE: '(gradlew|gradlew.bat|gradle/*|mvnw|mvnw.cmd|.m2/*|.mvn/*)'
+          FILTER_REGEX_EXCLUDE: "(gradlew|gradlew.bat|gradle/*|mvnw|mvnw.cmd|.m2/*|.mvn/*)"
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
