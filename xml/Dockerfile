@@ -21,6 +21,7 @@ RUN apk --update --no-cache add \
     python3 \
     python3-dev \
     xmlindent \
+    xmlsec \
     xmlstarlet \
     xmlto \
     && rm -rf /var/cache/apk/*
