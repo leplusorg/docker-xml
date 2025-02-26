@@ -37,6 +37,7 @@ jobs:
         working-directory: xml
         env:
           NVD_API_KEY: ${{ secrets.NVD_API_KEY }}
+        shell: bash
         run: |
           # shellcheck disable=SC2086
           ./mvnw ${MAVEN_CLI_OPTS} -DdependencyCheck.NVDApiKey=${NVD_API_KEY} dependency-check:aggregate
@@ -47,4 +48,5 @@ jobs:
           path: xml/target/
       - name: Clean up
         working-directory: xml
+        shell: bash
         run: rm "${HOME}/.m2/settings.xml"
