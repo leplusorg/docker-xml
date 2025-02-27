@@ -62,7 +62,7 @@ jobs:
         run: |
           images=""
           for tag in ${TAGS}; do
-            images+="'${tag}@${DIGEST}' "
+            images+="${tag}@${DIGEST} "
           done
           # shellcheck disable=SC2086
           cosign sign --recursive --yes ${images}
