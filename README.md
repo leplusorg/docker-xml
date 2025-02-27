@@ -7,6 +7,8 @@ Docker container with utilities to process XML data (xmllint, xsltproc...).
 [![Docker Stars](https://img.shields.io/docker/stars/leplusorg/xml)](https://hub.docker.com/r/leplusorg/xml)
 [![Docker Pulls](https://img.shields.io/docker/pulls/leplusorg/xml)](https://hub.docker.com/r/leplusorg/xml)
 [![Docker Version](https://img.shields.io/docker/v/leplusorg/xml?sort=semver)](https://hub.docker.com/r/leplusorg/xml)
+[![CII Best Practices](https://bestpractices.coreinfrastructure.org/projects/10067/badge)](https://bestpractices.coreinfrastructure.org/projects/10067)
+[![OpenSSF Scorecard](https://api.securityscorecards.dev/projects/github.com/leplusorg/docker-xml/badge)](https://securityscorecards.dev/viewer/?uri=github.com/leplusorg/docker-xml)
 
 ## Example not using the filesystem
 
