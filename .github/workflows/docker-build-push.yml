@@ -8,7 +8,9 @@ on:
     - cron: "0 0 * * 0"
   workflow_dispatch:
 
-permissions: {}
+permissions:
+  # Required by sigstore
+  id-token: write
 
 jobs:
   build:
@@ -63,4 +65,4 @@ jobs:
             images+="'${tag}@${DIGEST}' "
           done
           # shellcheck disable=SC2086
-          cosign sign --recursive --oidc-issuer 'https://token.actions.githubusercontent.com' --yes ${images}
+          cosign sign --recursive --yes ${images}
