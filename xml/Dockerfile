@@ -15,6 +15,7 @@ RUN apk --update --no-cache add \
     libxslt \
     maven \
     openjdk21-jre-headless \
+    py3-pip \
     python3 \
     python3-dev \
     xmlindent \
