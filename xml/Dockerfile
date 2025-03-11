@@ -15,9 +15,6 @@ RUN apk --update --no-cache add \
     libxslt \
     maven \
     openjdk21-jre-headless \
-    py3-gpxpy \
-    py3-pip \
-    py3-tcx2gpx \
     python3 \
     python3-dev \
     xmlindent \
@@ -26,8 +23,17 @@ RUN apk --update --no-cache add \
     xmlto \
     && rm -rf /var/cache/apk/*
 
-# hadolint ignore=DL3013
-RUN pip3 install --no-cache-dir --upgrade --break-system-packages yq
+SHELL ["/bin/ash", "-eo", "pipefail", "-c"]
+
+RUN pip3 install --no-cache-dir --upgrade --break-system-packages \
+    gpxpy==1.6.2 \
+    tcx2gpx==0.1.5 \
+    yq==3.4.3 \
+    && msg="$(pip list --outdated | grep -e -e gpxpy -e tcx2gpx -e yq || true)" \
+    && if [ -n "${msg}" ]; then \
+       >&2 echo "ERROR: outdated: ${msg}" ; \
+       exit 1 ; \
+    fi
 
 RUN mkdir -p /opt/saxon
 
