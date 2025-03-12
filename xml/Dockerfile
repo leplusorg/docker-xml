@@ -7,6 +7,8 @@ ARG USER_HOME=/home/default
 ARG USER_ID=1000
 ARG USER_GECOS=Default
 
+SHELL ["/bin/ash", "-eo", "pipefail", "-c"]
+
 # @TL FIXME: xml2rfc currently only in edge stream
 # hadolint ignore=DL3018
 RUN apk --update --no-cache add \
@@ -21,8 +23,6 @@ RUN apk --update --no-cache add \
     xmlstarlet \
     xmlto \
     && rm -rf /var/cache/apk/*
-
-SHELL ["/bin/ash", "-eo", "pipefail", "-c"]
 
 RUN pip3 install --no-cache-dir --upgrade --break-system-packages \
     gpxpy==1.6.2 \
