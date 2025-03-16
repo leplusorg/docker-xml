@@ -2,7 +2,7 @@
 
 Docker container with utilities to process XML data (xmllint, xsltproc...).
 
-[![Dockerfile](https://img.shields.io/badge/GitHub-Dockerfile-blue)](https://github.com/leplusorg/docker-xml/blob/main/xml/Dockerfile)
+[![Dockerfile](xml/Dockerfile)
 [![Docker Build](https://github.com/leplusorg/docker-xml/workflows/Docker/badge.svg)](https://github.com/leplusorg/docker-xml/actions?query=workflow:"Docker")
 [![Docker Stars](https://img.shields.io/docker/stars/leplusorg/xml)](https://hub.docker.com/r/leplusorg/xml)
 [![Docker Pulls](https://img.shields.io/docker/pulls/leplusorg/xml)](https://hub.docker.com/r/leplusorg/xml)
