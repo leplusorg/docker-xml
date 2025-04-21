@@ -17,7 +17,7 @@ RUN apk -U upgrade \
     libxml2-utils=2.13.4-r5 \
     libxslt=1.1.42-r2 \
     maven=3.9.9-r0 \
-    openjdk21-jre-headless=21.0.6_p7-r0 \
+    openjdk21-jre-headless=21.0.7_p6-r0 \
     py3-pip=24.3.1-r0 \
     python3=3.12.10-r0 \
     xmlindent=0.2.17-r3 \
