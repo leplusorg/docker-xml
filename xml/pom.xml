@@ -12,7 +12,7 @@
     <dependencyCheck.version>12.1.1</dependencyCheck.version>
     <dependencyCheck.skip>false</dependencyCheck.skip>
     <dependencyCheck.threshold>7</dependencyCheck.threshold>
-    <saxon.version>12.5</saxon.version>
+    <saxon.version>12.6</saxon.version>
   </properties>
   <build>
     <plugins>
