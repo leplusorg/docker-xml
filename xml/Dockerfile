@@ -14,7 +14,7 @@ SHELL ["/bin/ash", "-euo", "pipefail", "-c"]
 RUN apk -U upgrade \
     && apk add \
     html-xml-utils=8.6-r0 \
-    libxml2-utils=2.13.4-r5 \
+    libxml2-utils=2.13.4-r6 \
     libxslt=1.1.42-r2 \
     maven=3.9.9-r0 \
     openjdk21-jre-headless=21.0.7_p6-r0 \
