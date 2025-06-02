@@ -13,12 +13,12 @@ SHELL ["/bin/ash", "-euo", "pipefail", "-c"]
 # hadolint ignore=DL3019
 RUN apk -U upgrade \
     && apk add \
-    html-xml-utils=8.6-r0 \
-    libxml2-utils=2.13.4-r6 \
-    libxslt=1.1.42-r2 \
+    html-xml-utils=8.7-r0 \
+    libxml2-utils=2.13.8-r0 \
+    libxslt=1.1.43-r3 \
     maven=3.9.9-r0 \
     openjdk21-jre-headless=21.0.7_p6-r0 \
-    py3-pip=24.3.1-r0 \
+    py3-pip=25.1.1-r0 \
     python3=3.12.10-r1 \
     xmlindent=0.2.17-r3 \
     xmlsec=1.3.7-r0 \
