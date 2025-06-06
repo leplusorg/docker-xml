@@ -19,7 +19,7 @@ RUN apk -U upgrade \
     maven=3.9.9-r0 \
     openjdk21-jre-headless=21.0.7_p6-r0 \
     py3-pip=25.1.1-r0 \
-    python3=3.12.10-r1 \
+    python3=3.12.11-r0 \
     xmlindent=0.2.17-r3 \
     xmlsec=1.3.7-r0 \
     xmlstarlet=1.6.1-r2 \
