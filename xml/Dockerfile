@@ -15,7 +15,7 @@ RUN apk -U upgrade \
     && apk add \
     coreutils=9.7-r1 \
     curl=8.14.1-r1 \
-    git=2.49.0-r0 \
+    git=2.49.1-r0 \
     html-xml-utils=8.7-r0 \
     libxml2-utils=2.13.8-r0 \
     libxslt=1.1.43-r3 \
