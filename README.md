@@ -1,6 +1,6 @@
 # XML
 
-Multi-platform Docker container with utilities to process XML data (xmllint, xsltproc, xmlindent, xmlto...).
+Multi-platform Docker container with utilities to process XML data (`xmllint`, `xsltproc`, `xmlindent`, `xmlto`...).
 
 [![Dockerfile](https://img.shields.io/badge/GitHub-Dockerfile-blue)](xml/Dockerfile)
 [![Docker Build](https://github.com/leplusorg/docker-xml/workflows/Docker/badge.svg)](https://github.com/leplusorg/docker-xml/actions?query=workflow:"Docker")
