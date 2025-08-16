@@ -35,7 +35,6 @@ RUN apk -U upgrade \
     && rm -rf /var/cache/apk/*
 
 RUN pip3 install --no-cache-dir --upgrade --break-system-packages \
-    gpxpy==1.6.2 \
     tcx2gpx==0.1.5 \
     yq==3.4.3 \
     && msg="$(pip3 list --outdated | grep -i -e '^gpxpy ' -e '^tcx2gpx ' -e '^yq ' || true)" \
