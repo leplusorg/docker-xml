@@ -21,25 +21,24 @@ RUN apk -U upgrade \
     libxslt=1.1.43-r3 \
     maven=3.9.9-r0 \
     openjdk21-jre-headless=21.0.8_p9-r0 \
+    pipx=1.7.1-r0 \
     py3-pip=25.1.1-r0 \
     python3=3.12.11-r0 \
     xmlindent=0.2.17-r3 \
     xmlsec=1.3.7-r0 \
     xmlstarlet=1.6.1-r2 \
     xmlto=0.0.29-r0 \
-    && if apk -u list | grep -q -e . ; then \
-      apk -u list ; \
+    && if apk -u list | tee -a /dev/stderr | grep -q -e . ; then \
       exit 1 ; \
     fi \
     && apk cache clean \
     && rm -rf /var/cache/apk/*
 
-RUN pip3 install --no-cache-dir --upgrade --break-system-packages \
+RUN pipx ensurepath --global \
+    && pipx install --global \
     tcx2gpx==0.1.5 \
     yq==3.4.3 \
-    && msg="$(pip3 list --outdated | grep -i -e '^gpxpy ' -e '^tcx2gpx ' -e '^yq ' || true)" \
-    && if [ -n "${msg}" ]; then \
-       >&2 echo "ERROR: outdated: ${msg}" ; \
+    && if pipx upgrade-all --global | tee -a /dev/stderr | grep -q -e . ; then \
        exit 1 ; \
     fi
 
