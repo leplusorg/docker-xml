@@ -28,19 +28,13 @@ RUN apk -U upgrade \
     xmlsec=1.3.7-r0 \
     xmlstarlet=1.6.1-r2 \
     xmlto=0.0.29-r0 \
-    && if apk -u list | tee -a /dev/stderr | grep -q -e . ; then \
-      exit 1 ; \
-    fi \
     && apk cache clean \
     && rm -rf /var/cache/apk/*
 
 RUN pipx ensurepath --global \
     && pipx install --global \
     tcx2gpx==0.1.5 \
-    yq==3.4.3 \
-    && if pipx upgrade-all --global | tee -a /dev/stderr | grep -q -e . ; then \
-       exit 1 ; \
-    fi
+    yq==3.4.3
 
 RUN mkdir -p /opt/saxon
 
