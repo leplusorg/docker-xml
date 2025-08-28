@@ -29,14 +29,14 @@ RUN apk -U upgrade \
     xmlsec=1.3.7-r0 \
     xmlstarlet=1.6.1-r2 \
     xmlto=0.0.29-r0 \
+    yq-go=4.46.1-r1 \
     && apk cache clean \
     && rm -rf /var/cache/apk/*
 
 RUN pipx ensurepath --global \
     && pipx install --global \
     jsonfmt==0.2.7 \
-    tcx2gpx==0.1.5 \
-    yq==3.4.3
+    tcx2gpx==0.1.5
 
 RUN npm install -g \
     v8r@5.1.0
