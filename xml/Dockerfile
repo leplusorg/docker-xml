@@ -39,6 +39,7 @@ RUN pipx ensurepath --global \
     tcx2gpx==0.1.5
 
 RUN npm install -g \
+    prettier@3.6.2 \
     v8r@5.1.0
 
 RUN mkdir -p /opt/saxon
