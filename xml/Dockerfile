@@ -20,6 +20,7 @@ RUN apk -U upgrade \
     libxml2-utils=2.13.8-r0 \
     libxslt=1.1.43-r3 \
     maven=3.9.9-r0 \
+    npm=11.3.0-r1 \
     openjdk21-jre-headless=21.0.8_p9-r0 \
     pipx=1.7.1-r0 \
     py3-pip=25.1.1-r0 \
@@ -35,6 +36,9 @@ RUN pipx ensurepath --global \
     && pipx install --global \
     tcx2gpx==0.1.5 \
     yq==3.4.3
+
+RUN npm install -g \
+    v8r@5.1.0
 
 RUN mkdir -p /opt/saxon
 

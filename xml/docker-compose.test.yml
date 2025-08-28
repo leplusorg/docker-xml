@@ -21,6 +21,7 @@ services:
         xmllint --version # libxml2-utils
         xsltproc --version # libxslt
         mvn --version # maven
+        prettier --version # prettier
         java --version # openjdk21-jre-headless
         xmlindent -v # xmlindent
         xmlsec1 --version # xmlsec
