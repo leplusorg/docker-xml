@@ -28,4 +28,5 @@ services:
         xmlsec1 --version # xmlsec
         xmlstarlet --version # xmlstarlet
         xmlto --version # xmlto
+        yq --version # yq-go
       '
