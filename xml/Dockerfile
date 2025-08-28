@@ -34,6 +34,7 @@ RUN apk -U upgrade \
 
 RUN pipx ensurepath --global \
     && pipx install --global \
+    jsonfmt==0.2.7 \
     tcx2gpx==0.1.5 \
     yq==3.4.3
 
