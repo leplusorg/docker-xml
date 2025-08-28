@@ -11,8 +11,8 @@ SHELL ["/bin/ash", "-euo", "pipefail", "-c"]
 
 # @TL FIXME: xml2rfc currently only in edge stream
 # hadolint ignore=DL3019
-RUN apk -U upgrade \
-    && apk add \
+RUN apk upgrade --no-cache \
+    && apk add --no-cache \
     coreutils=9.7-r1 \
     curl=8.14.1-r1 \
     git=2.49.1-r0 \
@@ -30,7 +30,7 @@ RUN apk -U upgrade \
     xmlstarlet=1.6.1-r2 \
     xmlto=0.0.29-r0 \
     yq-go=4.46.1-r1 \
-    && apk cache clean \
+    && apk cache --no-cache clean \
     && rm -rf /var/cache/apk/*
 
 RUN pipx ensurepath --global \
