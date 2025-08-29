@@ -15,19 +15,19 @@ services:
         curl --version # curl
         dasel --version # dasel
         git --version # git
+        java --version # openjdk21-jre-headless
         jf -v # jsonfmt
+        mvn --version # maven
         pip --version # py3-pip
         pipx --version # pipx
-        python --version # python3
-        yq --version # yq
-        xmllint --version # libxml2-utils
-        xsltproc --version # libxslt
-        mvn --version # maven
         prettier --version # prettier
-        java --version # openjdk21-jre-headless
+        python --version # python3
+        remarshal --version # remarshal
         xmlindent -v # xmlindent
+        xmllint --version # libxml2-utils
         xmlsec1 --version # xmlsec
         xmlstarlet --version # xmlstarlet
         xmlto --version # xmlto
+        xsltproc --version # libxslt
         yq --version # yq-go
       '

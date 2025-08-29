@@ -37,6 +37,7 @@ RUN apk upgrade --no-cache \
 RUN pipx ensurepath --global \
     && pipx install --global \
     jsonfmt==0.2.7 \
+    remarshal==1.2.0 \
     tcx2gpx==0.1.5
 
 RUN npm install -g \
