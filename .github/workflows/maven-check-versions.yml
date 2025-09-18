@@ -9,7 +9,7 @@ on:
 permissions: {}
 
 jobs:
-  check:
+  maven-check-versions:
     runs-on: ubuntu-latest
     steps:
       - name: Set IMAGE
