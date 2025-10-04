@@ -46,7 +46,7 @@ RUN pipx ensurepath --global \
     && pipx install --global \
     jsonfmt==0.2.7 \
     remarshal==1.2.0 \
-    tcx2gpx==0.1.5
+    tcx2gpx==0.1.6
 
 RUN npm install -g \
     prettier@3.6.2 \
