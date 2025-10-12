@@ -20,7 +20,7 @@ RUN apk upgrade --no-cache \
     aspell-uk=1.4.0-r3 \
     coreutils=9.7-r1 \
     curl=8.14.1-r2 \
-    dasel=2.8.1-r7 \
+    dasel=2.8.1-r8 \
     gawk=5.3.2-r2 \
     git=2.49.1-r0 \
     grep=3.12-r0 \
