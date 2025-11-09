@@ -1,0 +1,3 @@
+jsonfmt==0.2.7
+remarshal==1.2.0
+tcx2gpx==0.1.6
