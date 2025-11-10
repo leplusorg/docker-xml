@@ -1,7 +1,6 @@
 {
   "name": "docker-xml",
-  "version": "1.0.0",
-  "description": "XML processing tools",
+  "version": "0.0.0",
   "dependencies": {
     "prettier": "3.6.2",
     "v8r": "5.1.0"
