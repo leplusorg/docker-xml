@@ -36,7 +36,7 @@ RUN apk upgrade --no-cache \
     py3-pip=25.1.1-r1 \
     python3=3.12.12-r0 \
     xmlindent=0.2.17-r3 \
-    xmlsec=1.3.7-r0 \
+    xmlsec=1.3.9-r0 \
     xmlstarlet=1.6.1-r2 \
     xmlto=0.0.29-r0 \
     yq-go=4.49.2-r1 \
