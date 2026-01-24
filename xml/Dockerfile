@@ -20,7 +20,7 @@ RUN apk upgrade --no-cache \
     aspell-uk=1.4.0-r3 \
     coreutils=9.8-r1 \
     curl=8.17.0-r1 \
-    dasel=2.8.1-r10 \
+    dasel=2.8.1-r11 \
     gawk=5.3.2-r2 \
     git=2.52.0-r0 \
     grep=3.12-r0 \
@@ -36,10 +36,10 @@ RUN apk upgrade --no-cache \
     py3-pip=25.1.1-r1 \
     python3=3.12.12-r0 \
     xmlindent=0.2.17-r3 \
-    xmlsec=1.3.7-r0 \
+    xmlsec=1.3.9-r0 \
     xmlstarlet=1.6.1-r2 \
     xmlto=0.0.29-r0 \
-    yq-go=4.49.2-r1 \
+    yq-go=4.49.2-r2 \
     && apk cache --no-cache clean \
     && rm -rf /var/cache/apk/*
 
