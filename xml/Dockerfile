@@ -39,7 +39,7 @@ RUN apk upgrade --no-cache \
     xmlsec=1.3.9-r0 \
     xmlstarlet=1.6.1-r2 \
     xmlto=0.0.29-r0 \
-    yq-go=4.49.2-r2 \
+    yq-go=4.49.2-r3 \
     && apk cache --no-cache clean \
     && rm -rf /var/cache/apk/*
 
