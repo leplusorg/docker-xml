@@ -34,7 +34,7 @@ RUN apk upgrade --no-cache \
     pandoc-cli=3.8.2.1-r0 \
     pipx=1.8.0-r0 \
     py3-pip=25.1.1-r1 \
-    python3=3.12.12-r0 \
+    python3=3.12.13-r0 \
     xmlindent=0.2.17-r3 \
     xmlsec=1.3.9-r0 \
     xmlstarlet=1.6.1-r2 \
