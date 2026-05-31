@@ -12,18 +12,12 @@ jobs:
   maven-check-versions:
     runs-on: ubuntu-latest
     steps:
-      - name: Set IMAGE
-        shell: bash
-        run: |
-          set -euo pipefail
-          IFS=$'\n\t'	
-          echo "IMAGE=${GITHUB_REPOSITORY#*/docker-}" >> "${GITHUB_ENV}"
       - name: Set MAVEN_CLI_OPTS
         shell: bash
         run: |
           set -euo pipefail
           IFS=$'\n\t'	
-          echo "MAVEN_CLI_OPTS=-f ${IMAGE}/pom.xml" >> "${GITHUB_ENV}"
+          echo "MAVEN_CLI_OPTS=-f ${GITHUB_REPOSITORY#*/docker-}/pom.xml" >> "${GITHUB_ENV}"
       - uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd # v6.0.2
         with:
           fetch-depth: 1
