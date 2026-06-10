@@ -12,34 +12,34 @@ SHELL ["/bin/ash", "-euo", "pipefail", "-c"]
 # @TL FIXME: xml2rfc currently only in edge stream
 RUN apk upgrade --no-cache \
     && apk add --no-cache \
-    aspell=0.60.8.1-r0 \
+    aspell=0.60.8.2-r0 \
     aspell-de=20161207.7.0-r0 \
-    aspell-en=2020.12.07-r0 \
+    aspell-en=2026.02.25-r0 \
     aspell-fr=0.50.3-r0 \
     aspell-ru=0.99_p7-r2 \
     aspell-uk=1.4.0-r3 \
-    coreutils=9.8-r1 \
-    curl=8.19.0-r0 \
+    coreutils=9.11-r0 \
+    curl=8.20.0-r1 \
     dasel=2.8.1-r15 \
     gawk=5.3.2-r2 \
-    git=2.52.0-r0 \
+    git=2.54.0-r0 \
     grep=3.12-r0 \
     html-xml-utils=8.7-r0 \
     jq=1.8.1-r0 \
-    libxml2-utils=2.13.9-r1 \
+    libxml2-utils=2.13.9-r2 \
     libxslt=1.1.43-r3 \
-    maven=3.9.11-r0 \
-    npm=11.11.0-r0 \
+    maven=3.9.16-r0 \
+    npm=11.12.1-r0 \
     openjdk21-jre-headless=21.0.11_p10-r0 \
-    pandoc-cli=3.8.2.1-r0 \
-    pipx=1.8.0-r0 \
-    py3-pip=25.1.1-r1 \
-    python3=3.12.13-r0 \
+    pandoc-cli=3.10-r0 \
+    pipx=1.14.0-r0 \
+    py3-pip=26.1.2-r0 \
+    python3=3.14.5-r0 \
     xmlindent=0.2.17-r3 \
-    xmlsec=1.3.9-r0 \
+    xmlsec=1.3.11-r0 \
     xmlstarlet=1.6.1-r2 \
     xmlto=0.0.29-r0 \
-    yq-go=4.49.2-r6 \
+    yq-go=4.53.3-r0 \
     && apk cache --no-cache clean \
     && rm -rf /var/cache/apk/*
 
