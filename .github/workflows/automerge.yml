@@ -10,7 +10,7 @@ jobs:
       # Required to merge the PR
       contents: write
       # Required to merge the PR if it modifies a workflow
-      actions: write
+      workflows: write
       # Required to approve the PR
       pull-requests: write
     runs-on: ubuntu-latest
