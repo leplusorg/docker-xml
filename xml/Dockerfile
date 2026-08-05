@@ -30,7 +30,7 @@ RUN apk upgrade --no-cache \
     libxslt=1.1.43-r3 \
     maven=3.9.16-r0 \
     npm=11.12.1-r0 \
-    openjdk21-jre-headless=21.0.11_p10-r0 \
+    openjdk21-jre-headless=21.0.12_p8-r0 \
     pandoc-cli=3.10-r0 \
     pipx=1.14.0-r0 \
     py3-pip=26.1.2-r0 \
