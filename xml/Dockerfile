@@ -25,7 +25,7 @@ RUN apk upgrade --no-cache \
     git=2.54.0-r0 \
     grep=3.12-r0 \
     html-xml-utils=8.7-r0 \
-    jq=1.8.1-r0 \
+    jq=1.8.2-r0 \
     libxml2-utils=2.13.9-r2 \
     libxslt=1.1.43-r3 \
     maven=3.9.16-r0 \
