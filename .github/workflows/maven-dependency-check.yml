@@ -72,9 +72,17 @@ jobs:
           set -euo pipefail
           # Do not set IFS=$'\n\t', breaks ${MAVEN_CLI_OPTS}
           # The NVD API key is read from the NVD_API_KEY environment variable by
-          # the pom (dependencyCheck.NVDApiKey default), so the secret is never
-          # passed on the command line where it would be visible in the process
-          # list.
+          # the pom (the nvd-api-key profile), so the secret is never passed on
+          # the command line where it would be visible in the process list.
+          # Without it the profile stays off and the pom skips the scan
+          # outright - which is the whole job, so there is nothing left to do
+          # but say so rather than let the run go green having scanned nothing.
+          if [ -z "${NVD_API_KEY:-}" ]; then
+            echo "::error::NVD_API_KEY is not set, so dependency-check would be skipped and nothing scanned."
+            echo "Add it as a repository secret; a key is free from" >&2
+            echo "https://nvd.nist.gov/developers/request-an-api-key" >&2
+            exit 1
+          fi
           # shellcheck disable=SC2086 # [Double quote to prevent globbing and word splitting]: splitting is desired for MAVEN_CLI_OPTS
           ./mvnw ${MAVEN_CLI_OPTS} dependency-check:aggregate
       - name: Clean up
