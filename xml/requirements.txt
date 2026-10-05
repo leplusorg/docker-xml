@@ -1,3 +1,9 @@
 jsonfmt==0.2.7
 remarshal==2.1.4
 tcx2gpx==0.1.6
+# FIXME: revisit on 2027-01-04. tqdm is not an app but a dependency of tcx2gpx.
+# It is pinned here only so that osv-scanner, which resolves the dependencies of
+# this file, scans the version actually installed instead of an old vulnerable
+# one (4.9.0). Lines marked "constraint" are only used as pip constraints by the
+# Dockerfile. Remove once osv-scanner resolves it correctly.
+tqdm==4.70.1 # constraint
