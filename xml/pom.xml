@@ -28,7 +28,7 @@
          NVD error quoted above - so nothing here ever hands the plugin a
          blank credential. -->
     <dependencyCheck.NVDApiKey></dependencyCheck.NVDApiKey>
-    <saxon.version>13.0</saxon.version>
+    <saxon.version>13.1</saxon.version>
   </properties>
   <build>
     <plugins>
