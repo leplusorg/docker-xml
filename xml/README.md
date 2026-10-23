@@ -8,8 +8,7 @@ Build context for the `leplusorg/xml` container image. See the
 - `Dockerfile` — the image definition. System packages come from the base
   distribution's package manager and are pinned to exact versions here.
 - `docker-compose.test.yml` — the smoke test run in CI against the built image:
-  the `sut` service checks that the container runs as the non-root user (UID
-  1000) and that each bundled tool starts.
+  the `sut` service checks that the container runs as the non-root user (UID 1000) and that each bundled tool starts.
 - `requirements.txt` — the Python tools installed in the image, with their
   pinned versions. The `Dockerfile` installs each one globally with `pipx`, in
   its own virtual environment. Lines marked `# constraint` are not installed as
@@ -24,7 +23,7 @@ Build context for the `leplusorg/xml` container image. See the
   from the ones recorded here.
 - `pom.xml` — the Maven project declaring the Java dependencies of the image
   (Saxon-HE). The `Dockerfile` copies it to `/opt/saxon` and runs `./mvnw
-  dependency:copy-dependencies` to download the jars into
+dependency:copy-dependencies` to download the jars into
   `/opt/saxon/target/dependency`. It also configures the OWASP dependency-check
   scan, which only runs when `NVD_API_KEY` is set.
 - `mvnw`, `mvnw.cmd`, `.mvn/wrapper/maven-wrapper.properties` — the Maven
