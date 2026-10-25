@@ -32,9 +32,9 @@ dependency:copy-dependencies` to download the jars into
   Windows variant, for local use only.
 - `run.sh` — copied to `/opt/saxon/run.sh`; runs Saxon's
   `net.sf.saxon.Transform` with the downloaded jars on the classpath.
-- `node_modules/` — created by a local `npm install`; ignored by git and not
+- `node_modules/` — created by a local `npm install`; ignored by Git and not
   part of the image.
-- `target/` — local Maven build output; ignored by git and not part of the image
+- `target/` — local Maven build output; ignored by Git and not part of the image
   (the image has its own `/opt/saxon/target`, created during the build).
 
 ## Manifests
