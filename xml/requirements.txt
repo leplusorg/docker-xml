@@ -1,4 +1,4 @@
-jsonfmt==0.2.7
+jsonfmt==0.2.8
 remarshal==2.1.4
 tcx2gpx==0.1.6
 # FIXME: revisit on 2027-01-04. tqdm is not an app but a dependency of tcx2gpx.
