@@ -27,7 +27,7 @@ RUN apk upgrade --no-cache \
     html-xml-utils=8.7-r0 \
     jq=1.8.2-r0 \
     libxml2-utils=2.13.9-r2 \
-    libxslt=1.1.43-r3 \
+    libxslt=1.1.43-r4 \
     maven=3.9.16-r0 \
     npm=11.12.1-r0 \
     openjdk21-jre-headless=21.0.12_p8-r0 \
